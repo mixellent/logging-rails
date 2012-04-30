@@ -1,4 +1,3 @@
-
 module Logging::Rails
 
   # The Railtie is used to inject the Logging framework into the Rails
@@ -42,7 +41,7 @@ module Logging::Rails
     end
 
     initializer 'logging.initialize_cache', :after => 'initialize_cache' do
-      ::Rails.cache.logger = ::Logging::Logger[::Rails.cache]
+      #::Rails.cache.logger = ::Logging::Logger[::Rails.cache]
     end
 
     config.after_initialize do |app|
